@@ -1,6 +1,3 @@
-(function () {
-  window.EventEmitter = EventEmitter;
-
   // our EventEmitter constructor function
   function EventEmitter() {
     this.subscribers = {};
@@ -30,11 +27,12 @@
     }
 
     // Grab the remaining arguments to our emit function.
-    var remainingArgs = [].slice.call(arguments, 1);
+  let remainingArgs = [].slice.call(arguments, 1);
 
     // For each subscriber, call it with our arguments.
     this.subscribers[eventName].forEach(function (listener) {
       listener.apply(null, remainingArgs);
     });
   };
-})();
+
+module.exports = EventEmitter;
