@@ -1,5 +1,10 @@
-const EventEmitter = require('./event-emitter')
-const whiteboard = new EventEmitter();
+//ES6
+import EventEmitter from './event-emitter';
+export const whiteboard = new EventEmitter();
+
+//Common JS
+// const EventEmitter = require('./event-emitter')
+// const whiteboard = new EventEmitter();
 // Ultimately, the color of our stroke;
   let color;
   // The color selection elements on the DOM.
@@ -105,4 +110,5 @@ const whiteboard = new EventEmitter();
     }
   };
 
-module.exports = whiteboard
+  //Common JS
+//module.exports = whiteboard

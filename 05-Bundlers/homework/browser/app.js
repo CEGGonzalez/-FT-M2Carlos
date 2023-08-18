@@ -1,6 +1,11 @@
-const whiteboard = require('./whiteboard');
-const io = require ('socket.io-client');
-  
+//Common JS
+// const whitheboard = require('./whitheboard');
+// const io = require ('socket.io-client');
+
+//ES6
+  import {whiteboard} from './whitheboard';
+  import io from 'socket.io-client';
+
   let socket = io(window.location.origin);
 
   socket.on("connect", function () {

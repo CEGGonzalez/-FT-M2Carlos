@@ -1,5 +1,6 @@
   // our EventEmitter constructor function
-  function EventEmitter() {
+  //ES6
+  export default function EventEmitter() {
     this.subscribers = {};
   }
 
@@ -35,4 +36,5 @@
     });
   };
 
-module.exports = EventEmitter;
+  //Common JS
+//module.exports = EventEmitter;
